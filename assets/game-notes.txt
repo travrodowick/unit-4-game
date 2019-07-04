@@ -1,0 +1,5 @@
+NOTES
+
+--having issues with generating crystal values
+    --game reset not able to complete function due to crystal values^^
+
