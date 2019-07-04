@@ -11,10 +11,10 @@ var directions = ['play this game if you aint lame'];
 // crystal values randomly generated between 1 - 12
 var crystalValue = [];
 var crystals = {
-    redCrystal: crystalValue,
-    blueCrystal: crystalValue,
-    yellowCrystal: crystalValue,
-    greenCrystal: crystalValue
+    redCrystal:0,
+    blueCrystal: 0,
+    yellowCrystal: 0,
+    greenCrystal: 0
 };
 
 //define functions
@@ -27,7 +27,7 @@ var crystals = {
     //generate 1 - 12 values for crystals
     function crystalGenerator() {
         for (var i = 0; i < crystals.length; i++ ){
-            var crystalValue = [Math.floor(Math.random() * 12) + 1];
+            crystals[i] = [Math.floor(Math.random() * 12) + 1];
         }
         console.log (crystals)
     };
