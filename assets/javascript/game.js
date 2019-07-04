@@ -1,40 +1,58 @@
 $(document).ready(function(){
 console.log('ready!');
 
-// declare variables
-var currentGuess = 0;
+// GLOBAL VARIABLES
+//========================================================================
+    var currentScore = 0;
 // target = randomly generated between 19 - 120
-var targetNum = 0;
-var wins = 0;
-var loses = 0;
-var directions = ['play this game if you aint lame'];
-// crystal values randomly generated between 1 - 12
-var crystalValue = [];
-var crystals = {
-    redCrystal:0,
-    blueCrystal: 0,
-    yellowCrystal: 0,
-    greenCrystal: 0
-};
-
-//define functions
+    var targetNum = 0;
+    var wins = 0;
+    var loses = 0;
+    var directions = ['play this game if you aint lame'];
+//FUNCTIONS
+//=========================================================================
     //generate target number between 
     function getTargetNum() {
         targetNum = Math.floor(Math.random() * 102) + 19;
-        console.log(targetNum)
     }
 
     //generate 1 - 12 values for crystals
     function crystalGenerator() {
-        for (var i = 0; i < crystals.length; i++ ){
-            crystals[i] = [Math.floor(Math.random() * 12) + 1];
-        }
-        console.log (crystals)
+        $.each(crystals, function(redCrystal, blueCrystal, greenCrystal, yellowCrystal){
+            [Math.floor(Math.random() * 12) + 1];
+        })
     };
 
+    //reset game
+    function gameReset () {
+        $('#crystal-count').text('Current Score:  ' + currentScore);
+        crystalGenerator();
+       //$('#crystal-container')//notsureyet
+        getTargetNum();
+        $('#targetNumber').text(targetNum);
 
-getTargetNum()
-crystalGenerator()
+    };
+
+    //update game stats
+    function winnerLoser () {
+        if (userScore === targetNum) {
+            alert('Winner Winner Chicken Dinner!!!');
+            gameReset();
+
+        }
+        
+    }
+
+    //Testing / Debugging
+    console.log (targetNum)
+    console.log (crystals);
+    console.log (currentGuess);
+
+
+//MAIN PROCESS
+//=======================================================================================
+
+
 
 //closing $(document).ready(function(){})    
 })
