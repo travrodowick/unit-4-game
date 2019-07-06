@@ -76,8 +76,24 @@ $(document).ready(function(){
 
     //register crystal clicks
     $('#redCrystalTag').on('click', function(event) {
-
+        console.log (crystal)
+        updateScore()
+        winnerLoser()
     }); 
-
+    $('#blueCrystalTag').on('click', function(event) {
+        console.log (crystal)
+        updateScore()
+        winnerLoser()
+    }); 
+    $('#greenCrystalTag').on('click', function(event) {
+        console.log (crystal)
+        updateScore()
+        winnerLoser()
+    }); 
+    $('#yellowCrystalTag').on('click', function(event) {
+        console.log (crystal)
+        updateScore()
+        winnerLoser()
+    }); 
 //closing $(document).ready(function(){})    
 })
