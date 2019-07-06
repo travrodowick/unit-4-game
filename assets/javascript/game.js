@@ -8,13 +8,7 @@ $(document).ready(function(){
     var wins = 0;
     var loses = 0;
     var directions = ['play this game if you aint lame'];
-    var crystals = {
-        //temp values given to crystals to test logic
-        redCrystal: 1,
-        blueCrystal: 2,
-        yellowCrystal: 3,
-        greenCrystal:  4
-    }
+    var crystals;
 //FUNCTION
 //=========================================================================
     //generate target number between 
@@ -24,10 +18,28 @@ $(document).ready(function(){
     }
 
     //generate 1 - 12 values for crystals
-    //  function crystalGenerator() {
-    //        crystals = [Math.floor(Math.random() * 12) + 1];
-    //        console.log (this.redCrystal, this.blueCrystal, this.yellowCrystal, this.greenCrystal);
-    //    };
+      function crystalGenerator() {
+            return {
+                crystals = {
+                    red: {
+                        points:  Math.floor(Math.random() * 12) + 1,
+                        immageURL:  
+                    },
+                    blue: {
+                        points:  Math.floor(Math.random() * 12) + 1,
+                        immageURL:
+                    },
+                    yellow: {
+                        points:  Math.floor(Math.random() * 12) + 1,
+                        immageURL:
+                    },
+                    green: {
+                        points:  Math.floor(Math.random() * 12) + 1,
+                        immageURL:
+                    },
+                }
+            }
+        };
 
     //reset game
     function gameReset () {
@@ -56,7 +68,6 @@ $(document).ready(function(){
 
     //update current score
     function updateScore () {
-
         var updatedScore = [currentScore += updatedScore]
         $('crystal-count').text('Current Score:  ' + updatedScore)
     };
