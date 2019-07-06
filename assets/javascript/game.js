@@ -26,7 +26,7 @@ $(document).ready(function(){
     //generate 1 - 12 values for crystals
     //  function crystalGenerator() {
     //        crystals = [Math.floor(Math.random() * 12) + 1];
-    //        console.log (crystals);
+    //        console.log (this.redCrystal, this.blueCrystal, this.yellowCrystal, this.greenCrystal);
     //    };
 
     //reset game
