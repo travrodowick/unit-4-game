@@ -3,12 +3,11 @@ $(document).ready(function(){
 // GLOBAL VARIABLES
 //========================================================================
     var currentScore = 0;
-// target = randomly generated between 19 - 120
+    var updatedScore = 0;
     var targetNum = 0;
     var wins = 0;
     var loses = 0;
     var directions = ['play this game if you aint lame'];
-    var value;
 //FUNCTION
 //=========================================================================
     //generate target number between 
@@ -59,11 +58,6 @@ $(document).ready(function(){
             $('#lossCounter').text('Losses:  ' + loses);
         }
     }
-
-    //update current score
-    var updatedScore = 0;
-
-
 
     //Testing / Debugging
     console.log('ready!');
